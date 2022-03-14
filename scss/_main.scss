@@ -1,0 +1,36 @@
+
+#title{
+    text-align: center;
+    padding: 60px;
+}
+.text-box{
+    display: flex;
+    // flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+    width: 1152px;
+margin: auto;
+}
+
+.content{
+    flex-direction: column;
+    align-items: flex-start;
+width: auto;
+
+time{
+    display: block;
+    padding: 15px 0px;
+}
+
+a{
+text-decoration: none;
+}
+
+img{
+    width: auto;
+    height:80px;
+}
+
+}
+
