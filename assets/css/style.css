@@ -1,4 +1,45 @@
-p {
-  color: red;
+#title {
+  text-align: center;
+  padding: 60px;
+}
+
+.text-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 1152px;
+  margin: auto;
+}
+
+.content {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: auto;
+}
+
+.content time {
+  display: block;
+  padding: 15px 0px;
+}
+
+.content a {
+  text-decoration: none;
+}
+
+.content img {
+  width: auto;
+  height: 80px;
 }
 /*# sourceMappingURL=style.css.map */
