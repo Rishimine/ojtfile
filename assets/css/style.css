@@ -1,4 +1,63 @@
-p {
-  color: red;
+img {
+  max-width: 100%;
+}
+
+header {
+  font-family: YuGothic,'Yu Gothic',sans-serif;
+  width: 1152px;
+  margin: 0 auto;
+}
+
+header .header {
+  width: 30%;
+  margin-left: auto;
+}
+
+header .header .header_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 15% 0;
+}
+
+.main_visual {
+  width: 1152px;
+  margin: 0 auto;
+}
+
+.main_visual .main_img {
+  margin: 0 auto;
+  z-index: 0;
+  display: block;
+}
+
+.main_visual .logo_img {
+  position: absolute;
+  top: 2%;
+  left: 10%;
+  z-index: 2;
+}
+
+.main_visual .text_img {
+  position: absolute;
+  z-index: 1;
+  right: 10.25%;
+  bottom: 24.9%;
+}
+
+.visual_text {
+  font-family: YuGothic,'Yu Gothic',sans-serif;
+  width: 1152px;
+  margin: 3% auto;
+}
+
+.copyright {
+  background-color: black;
+  text-align: center;
+  padding: 3% 0;
+  color: white;
 }
 /*# sourceMappingURL=style.css.map */
