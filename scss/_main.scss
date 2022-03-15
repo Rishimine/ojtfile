@@ -1,4 +1,6 @@
-
+main{
+    font-family:  YuGothic,'Yu Gothic',sans-serif;
+}
 img{
     max-width: 100%;
 }
@@ -29,6 +31,7 @@ img{
         flex-direction: column;
         align-items: flex-start;
         width: 30%;
+        padding: 5px;
         transition: all .3s;
         @include sp_screen{
             width: 100%;
@@ -44,7 +47,26 @@ img{
         a{
             text-decoration: none;
             font-size: 13px;
+            position: relative;
+            display: inline-block;
+            text-decoration: none;
+            color: black;
         }
+           a::after {
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            content: '';
+            width: 100%;
+            height: 2px;
+            background: #333;
+            transform: scale(0.2, 1);
+            transform-origin: right top;
+            transition: transform .3s;
+          }
+          a:hover::after {
+            transform: scale(1, 1);
+          }
     
         img{
             // height: 25vh;
@@ -70,4 +92,5 @@ img{
 .btn{
     display: flex;
     justify-content: flex-end;
+    padding: 10px;
 }

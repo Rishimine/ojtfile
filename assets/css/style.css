@@ -240,6 +240,10 @@ main {
   }
 }
 
+main {
+  font-family: YuGothic,'Yu Gothic',sans-serif;
+}
+
 img {
   max-width: 100%;
 }
@@ -289,6 +293,7 @@ img {
       -ms-flex-align: start;
           align-items: flex-start;
   width: 30%;
+  padding: 5px;
   -webkit-transition: all .3s;
   transition: all .3s;
 }
@@ -308,6 +313,33 @@ img {
 .text-box .content a {
   text-decoration: none;
   font-size: 13px;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+}
+
+.text-box .content a::after {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: #333;
+  -webkit-transform: scale(0.2, 1);
+          transform: scale(0.2, 1);
+  -webkit-transform-origin: right top;
+          transform-origin: right top;
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+}
+
+.text-box .content a:hover::after {
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
 }
 
 .text-box .content img {
@@ -338,6 +370,7 @@ img {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  padding: 10px;
 }
 
 .copyright {
