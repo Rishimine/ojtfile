@@ -36,7 +36,7 @@
                 <span><?php the_ID();?></span>
                 <div class="btn">
                 <a href="<?php the_permalink(); ?>">
-          <?php the_post_thumbnail(); ?>READ MORE</a>
+                <?php the_post_thumbnail(); ?>READ MORE</a>
             </div>
             <div class="content">
                 <img src="<?php echo get_template_directory_uri();?>/img/post_img_2.png" alt="">
