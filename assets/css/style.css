@@ -272,7 +272,7 @@ main {
   }
 }
 
-.content {
+.text-box .content {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -287,35 +287,35 @@ main {
 }
 
 @media screen and (max-width: 767px) {
-  .content {
+  .text-box .content {
     width: 100%;
     padding: 0px;
   }
 }
 
-.content time {
+.text-box .content time {
   display: block;
   padding: 15px 0px;
 }
 
-.content a {
+.text-box .content a {
   text-decoration: none;
   font-size: 13px;
 }
 
-.content img {
+.text-box .content img {
   height: 25vh;
   width: 20vw;
 }
 
 @media screen and (max-width: 767px) {
-  .content img {
+  .text-box .content img {
     height: auto;
     width: 100%;
   }
 }
 
-.content p {
+.text-box .content p {
   padding-bottom: 50px;
 }
 
