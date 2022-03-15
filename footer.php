@@ -6,7 +6,7 @@
     <!-- <script src="./assets/js/jquery.bgswitcher.js"></script> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
-    <script src="./js/script.js"></script>
+    <script src="<?php echo get_template_directory_uri();?>/js/script.js"></script>
 </body>
 
 </html>
