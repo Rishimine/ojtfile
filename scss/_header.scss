@@ -149,11 +149,23 @@ main{
             .slide-img{
 
                 img{
-                    display: block;
+                    // display: block;
                     margin: 0 auto;
-                    @include sp_screen{
-                        height: 75vw;
+                    // @include sp_screen{
+                        // height: 75vw;
                         // width: 100vw;
+                    // }
+                }
+                .pc{
+                    display: block !important;
+                    @include sp_screen{
+                        display: none !important;
+                    }
+                }
+                .sp{
+                    display: none !important;
+                    @include sp_screen{
+                        display: block !important;
                     }
                 }
             }
