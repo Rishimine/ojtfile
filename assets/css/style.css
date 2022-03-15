@@ -262,6 +262,16 @@ main {
   margin: auto;
 }
 
+@media screen and (max-width: 767px) {
+  .text-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+}
+
 .content {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -274,6 +284,13 @@ main {
   width: auto;
   -webkit-transition: all .3s;
   transition: all .3s;
+}
+
+@media screen and (max-width: 767px) {
+  .content {
+    width: 100%;
+    padding: 0px;
+  }
 }
 
 .content time {
@@ -289,6 +306,13 @@ main {
 .content img {
   height: 25vh;
   width: 20vw;
+}
+
+@media screen and (max-width: 767px) {
+  .content img {
+    height: auto;
+    width: 100%;
+  }
 }
 
 .content p {
