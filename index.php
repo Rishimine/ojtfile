@@ -36,8 +36,8 @@
                 <p><?php the_title();?></p>
 
                 <div class="btn">
-                <a href="<?php the_permalink(); ?>">
-                <?php the_post_thumbnail(); ?>READ MORE</a>
+                <!-- <a href="<?php //the_permalink(); ?>"> -->
+                <!-- <?php //the_post_thumbnail(); ?>READ MORE</a> -->
 
                 <a href="<?php the_permalink(); ?>">READ MORE</a>
 
