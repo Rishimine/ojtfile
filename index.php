@@ -20,33 +20,37 @@
                 <span class="wrap_text">アメリカンビレッジマガジン</span>
             </p>
         </div>
-        <!-- メインループ -->
+     
+
+        <h1 id="title">Latest Articles</h1>
+        <section class="text-box">
+               <!-- メインループ -->
         <?php
     if(have_posts()):
     while (have_posts()):
       the_post();
     ?>
-
-        <h1 id="title">Latest Articles</h1>
-        <section class="text-box">
             <div class="content">
-                <img src="<?php echo get_template_directory_uri();?>/img/post_img_1.png" alt="">
+            <?php the_post_thumbnail(); ?>
                 <time><?php echo get_the_date();?></time>
                 <p><?php the_title();?></p>
-                <span><?php the_ID();?></span>
+
                 <div class="btn">
                 <a href="<?php the_permalink(); ?>">
                 <?php the_post_thumbnail(); ?>READ MORE</a>
+
+                <a href="<?php the_permalink(); ?>">READ MORE</a>
+
             </div>
-            <div class="content">
-                <img src="<?php echo get_template_directory_uri();?>/img/post_img_2.png" alt="">
+            <!-- <div class="content">
+                <img src="<?php //echo get_template_directory_uri();?>/img/post_img_2.png" alt="">
                 <time>2022 / 03 /14 </time>
                 <p>内容</p>
                 <div class="btn"><a href="">READ MORE</a></div>
 
             </div>
             <div class="content">
-                <img src="<?php echo get_template_directory_uri();?>/img/post_img_3.png" alt="">
+                <img src="<?php //echo get_template_directory_uri();?>/img/post_img_3.png" alt="">
                 <time>2022 / 03 /14 </time>
                 <p>内容</p>
                 <div class="btn"><a href="">READ MORE</a></div>
@@ -55,27 +59,27 @@
         </section>
         <section class="text-box">
             <div class="content">
-                <img src="<?php echo get_template_directory_uri();?>/img/post_img_4.png" alt="">
+                <img src="<?php //echo get_template_directory_uri();?>/img/post_img_4.png" alt="">
                 <time>2022 / 03 /14 </time>
                 <p>内容</p>
                 <div class="btn"><a href="">READ MORE</a></div>
             </div>
             <div class="content">
-                <img src="<?php echo get_template_directory_uri();?>/img/post_img_5.png" alt="">
+                <img src="<?php //echo get_template_directory_uri();?>/img/post_img_5.png" alt="">
                 <time>2022 / 03 /14 </time>
                 <p>内容</p>
                 <div class="btn"><a href="">READ MORE</a></div>
 
             </div>
             <div class="content">
-                <img src="<?php echo get_template_directory_uri();?>/img/post_img_6.png" alt="">
+                <img src="<?php //echo get_template_directory_uri();?>/img/post_img_6.png" alt="">
                 <time>2022 / 03 /14 </time>
                 <p>内容</p>
                 <div class="btn"><a href="">READ MORE</a></div>
 
 
 
-            </div>
+            </div> -->
         </section>
         <?php endwhile;
         else:?>
