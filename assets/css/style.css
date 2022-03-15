@@ -1,57 +1,230 @@
 img {
   max-width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 header {
   font-family: YuGothic,'Yu Gothic',sans-serif;
+}
+
+header .header {
   width: 1152px;
   margin: 0 auto;
 }
 
-header .header {
-  width: 30%;
-  margin-left: auto;
+@media screen and (max-width: 767px) {
+  header .header {
+    width: 100%;
+  }
 }
 
 header .header .header_list {
+  width: 30%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 15% 0;
+  margin: 5% 0 5% auto;
 }
 
-.main_visual {
+@media screen and (max-width: 767px) {
+  header .header .header_list {
+    display: none;
+  }
+}
+
+header #navi {
+  display: block;
+  position: fixed;
+  height: 100%;
+  right: 0;
+  top: -100%;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  margin-top: 35%;
+  color: black;
+  background-color: rgba(248, 248, 248, 0.904);
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+  z-index: 20;
+  opacity: 0;
+}
+
+@media screen and (min-width: 768px) {
+  header #navi {
+    display: none;
+  }
+}
+
+header #navi .nav_menu {
+  margin: 15% auto;
+  text-align: center;
+}
+
+header #navi .nav_menu li {
+  margin: 10%;
+}
+
+header #navi .nav_menu li a {
+  color: black;
+  text-decoration: none;
+  text-align: center;
+  font-size: 30px;
+}
+
+@media screen and (max-width: 767px) {
+  header #navi .nav_menu li a {
+    font-size: 4vw;
+  }
+}
+
+header .toggle_btn {
+  display: block;
+  position: fixed;
+  top: 50px;
+  right: 45px;
+  width: 30px;
+  height: 30px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  cursor: pointer;
+  z-index: 20;
+}
+
+@media screen and (min-width: 768px) {
+  header .toggle_btn {
+    display: none;
+  }
+}
+
+header .toggle_btn span {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background-color: black;
+  border-radius: 4px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+header .toggle_btn span:nth-child(1) {
+  top: 4px;
+}
+
+header .toggle_btn span:nth-child(2) {
+  top: 14px;
+}
+
+header .toggle_btn span:nth-child(3) {
+  bottom: 4px;
+}
+
+.open #navi {
+  top: 0;
+  opacity: 1;
+}
+
+.open .toggle_btn span {
+  background-color: black;
+}
+
+.open .toggle_btn span:nth-child(1) {
+  -webkit-transform: translateY(10px) rotate(-315deg);
+  transform: translateY(10px) rotate(-315deg);
+}
+
+.open .toggle_btn span:nth-child(2) {
+  opacity: 0;
+}
+
+.open .toggle_btn span:nth-child(3) {
+  -webkit-transform: translateY(-10px) rotate(315deg);
+  transform: translateY(-10px) rotate(315deg);
+}
+
+main {
   width: 1152px;
   margin: 0 auto;
 }
 
-.main_visual .main_img {
+@media screen and (max-width: 767px) {
+  main {
+    width: 100%;
+  }
+}
+
+.main_visual {
   margin: 0 auto;
-  z-index: 0;
+  position: relative;
+}
+
+.main_visual .swiper-container .swiper-wrapper .slide-img img {
   display: block;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 767px) {
+  .main_visual .swiper-container .swiper-wrapper .slide-img img {
+    height: 75vw;
+  }
 }
 
 .main_visual .logo_img {
   position: absolute;
-  top: 2%;
-  left: 10%;
+  top: -25%;
+  left: 0;
   z-index: 2;
+}
+
+@media screen and (max-width: 767px) {
+  .main_visual .logo_img {
+    position: initial;
+    display: block;
+    margin: 5% auto;
+    width: 25%;
+  }
 }
 
 .main_visual .text_img {
   position: absolute;
+  right: 0;
+  bottom: -11%;
   z-index: 1;
-  right: 10.25%;
-  bottom: 24.9%;
+}
+
+@media screen and (max-width: 767px) {
+  .main_visual .text_img {
+    width: 62.5%;
+    top: 35%;
+    left: 5%;
+  }
 }
 
 .visual_text {
   font-family: YuGothic,'Yu Gothic',sans-serif;
-  width: 1152px;
-  margin: 3% auto;
+  font-size: 20px;
+  margin-top: 2%;
+  font-weight: lighter;
+}
+
+@media screen and (max-width: 767px) {
+  .visual_text {
+    text-align: center;
+    font-size: 3.75vw;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .visual_text .inner_text .wrap_text {
+    display: block;
+    margin: 2%;
+  }
 }
 
 #title {
@@ -129,5 +302,11 @@ header .header .header_list {
   text-align: center;
   padding: 3% 0;
   color: white;
+}
+
+@media screen and (max-width: 767px) {
+  .copyright {
+    font-size: 2vw;
+  }
 }
 /*# sourceMappingURL=style.css.map */

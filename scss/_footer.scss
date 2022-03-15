@@ -3,4 +3,7 @@
     text-align: center;
     padding: 3% 0;
     color: white;
+    @include sp_screen{
+        font-size: 2vw;
+    }
 }

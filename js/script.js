@@ -1,18 +1,45 @@
 
 
 
+let swipeOption = {
+    loop: true,
+    effect: 'fade',
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    speed: 3000,
+  }
+  new Swiper('.swiper-container', swipeOption);
+
 $(function(){
 
-    console.log("test");
-    // $(".main_img").fadeOut(3000);
+   $(".toggle_btn").on("click",function(){
+       if($("header").hasClass("open")){
+           $("header").removeClass("open");
+       }else{
+           $("header").addClass("open");
+       }
+   })
+   
+   $("#navi a").on("click",function(){
+       $("header").removeClass("open");
+   })
     
-    // $(".main_img").bgSwitcher({
-    //     images: ["./img/visual_1_pc.png", "./img/visual_1_pc.png", "./img/visual_1_pc.png"],
-    //     interval: 6000,
-    //     loop: true,
-    //     shuffle: true,
-    //     effect: "drop",
-    //     duration: 750,
-    //     easing: "swing"
-    // });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 })

@@ -1,56 +1,210 @@
 
 img{
     max-width: 100%;
+    // max-height: 100%;
+    box-sizing: border-box;
 }
 
 header{
     font-family: YuGothic,'Yu Gothic',sans-serif;
-    width: 1152px;
-    margin: 0 auto;
 
     .header{
-        width: 30%;
-        margin-left: auto;
+        width: 1152px;
+        margin: 0 auto;
+        @include sp_screen{
+            width: 100%;
+        }
 
         .header_list{
+            width: 30%;
             display: flex;
             justify-content: space-between; 
-           margin: 15% 0;
+            margin: 5% 0 5% auto;
+            @include sp_screen{
+                display: none;
+            }
+        }
+    }
+
+    #navi{
+        display: block;
+        position: fixed;
+        height: 100%;
+        right: 0;
+        top: -100%;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        margin-top: 35%;
+        color: black;
+        background-color: rgba(248, 248, 248, 0.904);
+        // overflow-x: hidden;
+        // overflow-y: auto;
+        // -webkit-overflow-scrolling: touch;
+        transition: all 0.8s ease;
+        z-index: 20;
+        opacity: 0;
+        @include pc_screen{
+            display: none;
+        }
+
+        .nav_menu{
+            margin: 15% auto;
+            text-align: center;
+
+            li{
+                margin: 10%;
+
+                a{
+                    color: black;
+                    text-decoration: none;
+                    text-align: center;
+                    font-size: 30px;
+                    @include sp_screen{
+                        font-size: 4vw;
+                    }
+                }
+            }
+        }
+    }
+
+    .toggle_btn{
+        display: block;
+        position: fixed;
+        top: 50px;
+        right: 45px;
+        width: 30px;
+        height: 30px;
+        transition: all 0.5s;
+        cursor: pointer;
+        z-index: 20;
+        @include pc_screen{
+            display: none;
+        }
+
+        span{
+            display: block;
+            position: absolute;
+            left: 0;
+            width: 30px;
+            height: 2px;
+            background-color: black;
+            border-radius: 4px;
+            transition: all 0.5s;
+
+            &:nth-child(1){
+                top: 4px;
+            }
+
+            &:nth-child(2){
+                top: 14px;
+            }
+
+            &:nth-child(3){
+                bottom: 4px;
+            }
         }
     }
 }
 
-.main_visual{
+.open #navi{
+    top: 0;
+    opacity: 1;
+}
+
+.open .toggle_btn span{
+    background-color: black;
+
+    &:nth-child(1){
+        -webkit-transform: translateY(10px) rotate(-315deg);
+        transform: translateY(10px) rotate(-315deg);
+    }
+
+    &:nth-child(2){
+        opacity: 0;
+    }
+
+    &:nth-child(3){
+        -webkit-transform: translateY(-10px) rotate(315deg);
+        transform: translateY(-10px) rotate(315deg);
+    }
+}
+
+main{
     width: 1152px;
     margin: 0 auto;
+    @include sp_screen{
+        width: 100%;
+    }
+}
 
-    .main_img{
-        margin: 0 auto;
-        z-index: 0;
-        display: block;
+.main_visual{
+    margin: 0 auto;
+    position: relative;
+
+    .swiper-container{
+    
+        .swiper-wrapper{
+
+            .slide-img{
+
+                img{
+                    display: block;
+                    margin: 0 auto;
+                    @include sp_screen{
+                        height: 75vw;
+                        // width: 100vw;
+                    }
+                }
+            }
+        }
     }
 
     .logo_img{
         position: absolute;
-        top: 2%;
-        left: 10%;
+        top: -25%;
+        left: 0;
         z-index: 2;
+        @include sp_screen{
+            position: initial;
+            display: block;
+            margin: 5% auto;
+            width: 25%;
+        }
     }
 
     .text_img{
         position: absolute;
+        right: 0;
+        bottom: -11%;
         z-index: 1;
-        right: 10.25%;
-        bottom: 24.9%;
+        @include sp_screen{
+            width: 62.5%;
+            top: 35%;
+            left: 5%;
+        }
     }
 }
 
 .visual_text{
     font-family: YuGothic,'Yu Gothic',sans-serif;
-    width: 1152px;
-    margin: 3% auto;
+    font-size: 20px;
+    margin-top: 2%;
+    font-weight: lighter;
+    @include sp_screen{
+        text-align: center;
+        font-size: 3.75vw;
+    }
 
     .inner_text{
 
+        .wrap_text{
+            @include sp_screen{
+                display: block;
+                margin: 2%;
+            }        
+        }
     }
+    
 }
+
