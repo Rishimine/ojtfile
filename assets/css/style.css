@@ -14,9 +14,9 @@ header .header {
 }
 
 @media screen and (max-width: 767px) {
-   header .header {
+  header .header {
     width: 100%;
-   }
+  }
 }
 
 header .header .header_list {
@@ -307,9 +307,7 @@ img {
       -ms-flex-align: start;
           align-items: flex-start;
   width: 30%;
-
   height: 400px;
-
   -webkit-transition: all .3s;
   transition: all .3s;
 }
@@ -320,6 +318,44 @@ img {
     height: auto;
     padding: 0px;
   }
+}
+
+.text-box .content time {
+  display: block;
+  padding: 15px 0px;
+}
+
+.text-box .content a {
+  text-decoration: none;
+  font-size: 13px;
+  padding-bottom: 2%;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+}
+
+.text-box .content a::after {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: #333;
+  -webkit-transform: scale(0.2, 1);
+          transform: scale(0.2, 1);
+  -webkit-transform-origin: right top;
+          transform-origin: right top;
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+}
+
+.text-box .content a:hover::after {
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
 }
 
 .text-box .content img {
@@ -344,7 +380,6 @@ img {
 .text-box .content .content_text a {
   text-decoration: none;
   font-size: 13px;
-  padding-bottom: 2%;
   position: relative;
   display: inline-block;
   text-decoration: none;
