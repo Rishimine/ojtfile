@@ -10,19 +10,35 @@ header{
     .header{
         width: 1152px;
         margin: 0 auto;
-        display: flex;
-        @include sp_screen{
-            width: 100%;
-        }
 
-        .header_list{
-            width: 30%;
-            display: flex;
-            justify-content: space-between; 
-            margin: 5% 0 5% auto;
+        .pc_none{
             @include sp_screen{
                 display: none;
             }
+
+            div{
+                
+                ul{
+                    display: flex;
+                    justify-content: space-between;
+                    width: 35%;
+                    margin-left: auto;
+                    @include sp_screen{
+                        display: none;
+                    }
+
+                    li{
+                        margin: 15% 0 15% 2%;
+                        text-align: end;
+
+                        a{
+                            text-decoration: none;
+                            color: black;
+                        }
+                    }
+                }
+            }
+
         }
     }
 
