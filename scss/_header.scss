@@ -10,6 +10,7 @@ header{
     .header{
         width: 1152px;
         margin: 0 auto;
+        display: flex;
         @include sp_screen{
             width: 100%;
         }

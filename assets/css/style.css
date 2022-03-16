@@ -11,6 +11,9 @@ header {
 header .header {
   width: 1152px;
   margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 @media screen and (max-width: 767px) {

@@ -3,6 +3,9 @@
 // 投稿ページにサムネイルを投稿する方法
 add_theme_support("post-thumbnails");
 
+
+    add_theme_support( 'menus' );
+
 // function wphead_cb() {
 //     echo '<style type="text/css">';
 //     echo '.topimg-pc h1, .topimg-pc h6 { color: #'.get_header_textcolor().' }';
