@@ -15,14 +15,15 @@
 <body>
     <header>
         <div class="header">
-            <ul class="header_list">
+            <!-- <ul class="header_list">
                 <li>Menu01</li>
                 <li>Menu02</li>
                 <li>Menu03</li>
                 <li>Menu04</li>
-            </ul>
+            </ul> -->
+            <?php wp_nav_menu(); ?>
             <nav id="navi">
-                <!-- <?php //wp_nav_menu(["menu" => "nav_menu"]); ?> -->
+                <!-- <?php //wp_nav_menu(); ?> -->
                 <ul class="nav_menu">
                     <li><a href="">Menu01</a></li>
                     <li><a href="">Menu02</a></li>
