@@ -31,13 +31,47 @@ img{
         flex-direction: column;
         align-items: flex-start;
         width: 30%;
+
         height: 400px;
+
         transition: all .3s;
         @include sp_screen{
             width: 100%;
             height: auto;
             padding: 0px;
         }
+
+
+        time{
+            display: block;
+            padding: 15px 0px;
+        }
+    
+    
+        a{
+            text-decoration: none;
+            font-size: 13px;
+            padding-bottom: 2%;
+            position: relative;
+            display: inline-block;
+            text-decoration: none;
+            color: black;
+        }
+           a::after {
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            content: '';
+            width: 100%;
+            height: 2px;
+            background: #333;
+            transform: scale(0.2, 1);
+            transform-origin: right top;
+            transition: transform .3s;
+          }
+          a:hover::after {
+            transform: scale(1, 1);
+          }
 
         img{
             // height: 25vh;
