@@ -11,32 +11,39 @@ header {
 header .header {
   width: 1152px;
   margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 @media screen and (max-width: 767px) {
-  header .header {
-    width: 100%;
+  header .header .pc_none {
+    display: none;
   }
 }
 
-header .header .header_list {
-  width: 30%;
+header .header .pc_none div ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 5% 0 5% auto;
+  width: 35%;
+  margin-left: auto;
 }
 
 @media screen and (max-width: 767px) {
-  header .header .header_list {
+  header .header .pc_none div ul {
     display: none;
   }
+}
+
+header .header .pc_none div ul li {
+  margin: 15% 0 15% 2%;
+  text-align: end;
+}
+
+header .header .pc_none div ul li a {
+  text-decoration: none;
+  color: black;
 }
 
 header #navi {

@@ -15,6 +15,7 @@
 <body>
     <header>
         <div class="header">
+            <div class="pc_none">
             <!-- <ul class="header_list">
                 <li>Menu01</li>
                 <li>Menu02</li>
@@ -22,13 +23,15 @@
                 <li>Menu04</li>
             </ul> -->
             <?php wp_nav_menu(); ?>
+            </div>
             <nav id="navi">
                 <!-- <?php //wp_nav_menu(); ?> -->
                 <ul class="nav_menu">
-                    <li><a href="">Menu01</a></li>
+                    <!-- <li><a href="">Menu01</a></li>
                     <li><a href="">Menu02</a></li>
                     <li><a href="">Menu03</a></li>
-                    <li><a href="">Menu04</a></li>
+                    <li><a href="">Menu04</a></li> -->
+                    <?php wp_nav_menu(); ?>
                 </ul>
             </nav>
             <div class="toggle_btn">
