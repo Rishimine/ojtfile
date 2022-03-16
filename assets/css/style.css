@@ -293,7 +293,6 @@ img {
       -ms-flex-align: start;
           align-items: flex-start;
   width: 30%;
-  padding: 5px;
   -webkit-transition: all .3s;
   transition: all .3s;
 }
@@ -313,6 +312,7 @@ img {
 .text-box .content a {
   text-decoration: none;
   font-size: 13px;
+  padding-bottom: 2%;
   position: relative;
   display: inline-block;
   text-decoration: none;
