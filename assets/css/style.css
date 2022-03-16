@@ -159,36 +159,30 @@ main {
   }
 }
 
-.main_visual {
+main .main_visual {
   margin: 0 auto;
   position: relative;
 }
 
-.main_visual .swiper-container .swiper-wrapper .slide-img img {
+main .main_visual .slide-img .img_php {
+  width: 1024px;
+  height: 448px;
   margin: 0 auto;
 }
 
-.main_visual .swiper-container .swiper-wrapper .slide-img .pc {
-  display: block !important;
-}
-
 @media screen and (max-width: 767px) {
-  .main_visual .swiper-container .swiper-wrapper .slide-img .pc {
-    display: none !important;
+  main .main_visual .slide-img .img_php {
+    display: none;
   }
 }
 
-.main_visual .swiper-container .swiper-wrapper .slide-img .sp {
-  display: none !important;
-}
-
-@media screen and (max-width: 767px) {
-  .main_visual .swiper-container .swiper-wrapper .slide-img .sp {
-    display: block !important;
+@media screen and (min-width: 768px) {
+  main .main_visual .slide-img .spimg_php {
+    display: none;
   }
 }
 
-.main_visual .logo_img {
+main .main_visual .logo_img {
   position: absolute;
   top: -25%;
   left: 0;
@@ -196,7 +190,7 @@ main {
 }
 
 @media screen and (max-width: 767px) {
-  .main_visual .logo_img {
+  main .main_visual .logo_img {
     position: initial;
     display: block;
     margin: 5% auto;
@@ -204,7 +198,7 @@ main {
   }
 }
 
-.main_visual .text_img {
+main .main_visual .text_img {
   position: absolute;
   right: 0;
   bottom: -11%;
@@ -212,29 +206,49 @@ main {
 }
 
 @media screen and (max-width: 767px) {
-  .main_visual .text_img {
+  main .main_visual .text_img {
     width: 62.5%;
     top: 35%;
     left: 5%;
   }
 }
 
-.visual_text {
+main .main_visual .text_img .pc {
+  display: block !important;
+}
+
+@media screen and (max-width: 767px) {
+  main .main_visual .text_img .pc {
+    display: none !important;
+  }
+}
+
+main .main_visual .text_img .sp {
+  display: none !important;
+}
+
+@media screen and (max-width: 767px) {
+  main .main_visual .text_img .sp {
+    display: block !important;
+  }
+}
+
+main .visual_text {
   font-family: YuGothic,'Yu Gothic',sans-serif;
   font-size: 20px;
-  margin-top: 2%;
+  margin: 2% auto 0 auto;
   font-weight: lighter;
 }
 
 @media screen and (max-width: 767px) {
-  .visual_text {
+  main .visual_text {
     text-align: center;
     font-size: 3.75vw;
   }
 }
 
 @media screen and (max-width: 767px) {
-  .visual_text .inner_text .wrap_text {
+  main .visual_text .inner_text .wrap_text {
     display: block;
     margin: 2%;
   }
@@ -293,7 +307,7 @@ img {
       -ms-flex-align: start;
           align-items: flex-start;
   width: 30%;
-  padding: 5px;
+  height: 400px;
   -webkit-transition: all .3s;
   transition: all .3s;
 }
@@ -301,25 +315,42 @@ img {
 @media screen and (max-width: 767px) {
   .text-box .content {
     width: 100%;
+    height: auto;
     padding: 0px;
   }
 }
 
-.text-box .content time {
-  display: block;
-  padding: 15px 0px;
+.text-box .content img {
+  width: 100%;
 }
 
-.text-box .content a {
+@media screen and (max-width: 767px) {
+  .text-box .content img {
+    height: auto;
+    width: 100%;
+  }
+}
+
+.text-box .content .content_text {
+  padding: 5%;
+}
+
+.text-box .content .content_text time {
+  display: block;
+}
+
+.text-box .content .content_text a {
   text-decoration: none;
   font-size: 13px;
   position: relative;
   display: inline-block;
   text-decoration: none;
   color: black;
+  padding-bottom: 1%;
+  margin-top: 15%;
 }
 
-.text-box .content a::after {
+.text-box .content .content_text a::after {
   position: absolute;
   bottom: -4px;
   left: 0;
@@ -337,30 +368,18 @@ img {
   transition: transform .3s, -webkit-transform .3s;
 }
 
-.text-box .content a:hover::after {
+.text-box .content .content_text a:hover::after {
   -webkit-transform: scale(1, 1);
           transform: scale(1, 1);
 }
 
-.text-box .content img {
-  width: 100%;
-}
-
-@media screen and (max-width: 767px) {
-  .text-box .content img {
-    height: auto;
-    width: 100%;
-  }
-}
-
-.text-box .content p {
-  padding-bottom: 50px;
+.text-box .content .content_text p {
+  padding: 3% 0;
 }
 
 .content:hover {
-  top: -3px;
-  -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 3px 4px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 3px 4px rgba(0, 0, 0, 0.3);
 }
 
 .btn {

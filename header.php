@@ -22,6 +22,7 @@
                 <li>Menu04</li>
             </ul>
             <nav id="navi">
+                <!-- <?php //wp_nav_menu(["menu" => "nav_menu"]); ?> -->
                 <ul class="nav_menu">
                     <li><a href="">Menu01</a></li>
                     <li><a href="">Menu02</a></li>
