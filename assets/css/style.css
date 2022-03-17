@@ -364,7 +364,7 @@ img {
   display: inline-block;
   text-decoration: none;
   color: black;
-  padding-bottom: 1%;
+  padding-bottom: 3%;
   margin-top: 15%;
   margin-bottom: 5%;
 }
@@ -400,6 +400,31 @@ img {
 .content:hover {
   -webkit-box-shadow: 0 3px 4px rgba(0, 0, 0, 0.3);
           box-shadow: 0 3px 4px rgba(0, 0, 0, 0.3);
+}
+
+.btn.loadMoreBtn {
+  color: #333333;
+  text-align: center;
+}
+
+.btn.loadMoreBtn:hover {
+  text-decoration: none;
+}
+
+.alm-listing .alm-reveal {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  opacity: 1;
+  height: auto;
+  outline: none;
+}
+
+#ajax-load-more {
+  width: 100%;
 }
 
 .copyright {

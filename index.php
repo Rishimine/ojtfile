@@ -24,28 +24,9 @@
             </p>
         </div>
         <h1 id="title">Latest Articles</h1>
-        <section class="text-box">
-              <?php
-                if(have_posts()):
-                while (have_posts()):
-                the_post();
-              ?>
-            <div class="content">
-                <?php the_post_thumbnail(); ?>
-                <div class="content_text">
-                    <time><?php echo get_the_date();?></time>
-                    <p><?php the_title();?></p>
-                    <div class="btn">
-                        <a href="<?php the_permalink(); ?>">READ MORE</a>
-                    </div>
-                </div>
-            </div>
-        <?php endwhile;
-        else:?>
-        <section>
-            <p>表示する記事がありません。</p>
+        
+        <section class="text-box"> 
+            <?php echo do_shortcode('[ajax_load_more post_type="post" posts_per_page="6" scroll="false"]')?>
         </section>
-        <?php endif; ?>
-        </section>     
     </main>
 <?php get_footer();?>
