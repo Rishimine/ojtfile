@@ -19,7 +19,7 @@ img{
 .text-box{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     box-sizing: border-box;
     width: 1152px;
@@ -124,6 +124,7 @@ img{
     opacity: 1;
     height: auto;
     outline: none;
+    // margin: 0 auto;
 }
 
 #ajax-load-more{
