@@ -17,6 +17,23 @@ $(function(){
    })
     
 
+   let state = false;
+   let pos;
+   $(".toggle_btn").on("click",function(){
+       if(state == false){
+           pos = $(window).scrollTop();
+           $("body").addClass("fixed").css({"top": -pos});
+           state = true;
+       }else{
+           $("body").removeClass("fixed").css({"top" : 0});
+           window.scrollTo(0, pos);
+           state = false;
+       }
+   });
+
+
+        
+});
 
 
 
@@ -29,7 +46,3 @@ $(function(){
 
 
 
-
-
-
-})

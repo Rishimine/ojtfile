@@ -16,21 +16,13 @@
     <header>
         <div class="header">
             <div class="pc_none">
-            <!-- <ul class="header_list">
-                <li>Menu01</li>
-                <li>Menu02</li>
-                <li>Menu03</li>
-                <li>Menu04</li>
-            </ul> -->
-            <?php wp_nav_menu(); ?>
+                <?php wp_nav_menu(); ?>
             </div>
             <nav id="navi">
-                <!-- <?php //wp_nav_menu(); ?> -->
+                <div class="logo_img2">
+                    <img src="<?php echo get_template_directory_uri();?>/img/logo.png" alt="">
+                </div>
                 <ul class="nav_menu">
-                    <!-- <li><a href="">Menu01</a></li>
-                    <li><a href="">Menu02</a></li>
-                    <li><a href="">Menu03</a></li>
-                    <li><a href="">Menu04</a></li> -->
                     <?php wp_nav_menu(); ?>
                 </ul>
             </nav>
@@ -39,5 +31,6 @@
                 <span></span>
                 <span></span>
             </div>
+            
         </div>
     </header>
